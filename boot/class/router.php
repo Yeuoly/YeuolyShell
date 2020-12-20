@@ -111,7 +111,9 @@ class Router{
                 throw new Error($e->getMessage());
             }
             if(is_string($response) || !$response){
-                return new Response($response ? $response : '', 200, ['ACCESS-CONTROL-ALLOW-ORIGIN' => $allow_origin]);
+                $response = new Response($response ? $response : '', 200, ['ACCESS-CONTROL-ALLOW-ORIGIN' => $allow_origin]);
+            }else if(is_object($response) && get_class($response) === 'YeuolyShellView\\View'){
+                $response = new Response($response->render(), 200);
             }
             return $response;
         };

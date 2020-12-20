@@ -7,6 +7,7 @@ use const YeuolyShellConf\ALLOW_LIST;
 use const YeuolyShellConf\APP_INFO;
 use const YeuolyShellConf\APP_SECURITY;
 use const YeuolyShellConf\DB_INFO;
+use const YeuolyShellConf\YS_NAMESPACE;
 
 class Config{
     private $PATH = '';
@@ -18,6 +19,8 @@ class Config{
     private $ALLOW_LIST = ALLOW_LIST;
 
     private $APP_SECURITY = APP_SECURITY;
+
+    private $NAMESPACE = YS_NAMESPACE;
 
     public function __construct()
     {   
@@ -51,6 +54,13 @@ class Config{
             return $this->APP_INFO[$key];
         }
         return '';
+    }
+
+    public function getNamespaces($key){
+        if(key_exists($key, $this->NAMESPACE)){
+            return $this->NAMESPACE[$key];
+        }
+        return [];
     }
 
     public function getAllowList($key){

@@ -27,6 +27,15 @@ const APP_SECURITY = [
     ]
 ];
 
+const YS_NAMESPACE = [
+    'controller' => [
+        'controller'
+    ],
+    'validate' => [
+        'validate'
+    ]
+];
+
 const ALLOW_LIST = [
     'ORIGIN' => ''
     // [

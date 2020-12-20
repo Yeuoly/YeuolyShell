@@ -150,7 +150,7 @@ class DBQuery{
         //  [
         //      [
         //          'username','=','yeuoly',
-        //          'password','=','zhouyu2002.'
+        //          'password','=','123456'
         //      ],
         //      [
         //          [
@@ -163,7 +163,7 @@ class DBQuery{
         //      ],
         //  ];
 
-        // 'SELECT WHERE ( (username = `yeuoly` AND password = `zhouyu2002.`) OR ( ( id = `1` AND password = `root` ) OR ( security > `3` ) ) )';
+        // 'SELECT WHERE ( (username = `yeuoly` AND password = `123456`) OR ( ( id = `1` AND password = `root` ) OR ( security > `3` ) ) )';
         // 这里本来应该做condition的格式检查的，但是由于太菜了还没想好怎么检查，其实最好的方式就是try catch，但是想来想去，貌似也没好try的= =，
         // 所以干脆就在buildWhereQuery中进行检查工作好了
         $this->condition = $condition;

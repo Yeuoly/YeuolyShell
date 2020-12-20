@@ -73,7 +73,7 @@ class Request{
         $this->__fill($this->headers, 'REFERER', $request, 'HTTP_REFERER');
 
         
-        $queries = explode('&', $request['QUERY_STRING']);
+        $queries = explode('&', urldecode($request['QUERY_STRING']));
         foreach($queries as $val){
             if($val == '')continue;
             $couple = explode('=', $val);

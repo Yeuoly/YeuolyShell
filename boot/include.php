@@ -5,7 +5,7 @@ namespace YeuolyShellInclude;
 use function YeuolyShellRouter\initRoutes\__addRoutes;
 
 class Includer{
-    private $controllers_dirs = ['controller','subcontroller'];
+    private $controllers_dirs = ['controller'];
 
     private $validators_dirs = ['validate'];
 
@@ -17,6 +17,8 @@ class Includer{
     {
         $this->config = $config;
         $this->router = $router;
+        $this->controllers_dirs = $config->getNamespaces('controller');
+        $this->validators_dirs = $config->getNamespaces('validate');
     }
 
     public function loadControllers(){
