@@ -97,18 +97,18 @@ class Index extends Controller{
 
 # 下面列举了YeuolyShell一些简单的功能的使用
 
-## [数据库操作](./docs/introduction.md)
+## [数据库操作](./docs/introduction/db.md)
 `YeuolyShell`支持灵活方便的数据库操作类，它的具体实现在`boot/class/db.php`中，如果您有兴趣帮助改进`YeuolyShell`的话，欢迎加入`YeuolyShell`的开发！<br>
 YeuolyShell使用控制器函数中传入的$database进行数据库操作，希望您已经熟知了这一点
 
-## [视图层操作](./docs/view.md)
+## [视图层操作](./docs/introduction/view.md)
 `YeuolyShell`虽然注重于后端，但也提供了视图层功能
 
-## [传参](./docs/parameters.md)
+## [传参](./docs/introduction/parameters.md)
 `YeuolyShell`的传参非常常规
 
-## [中间件](./docs/middleware.md)
+## [中间件](./docs/introduction/middleware.md)
 `YeuolyShell`的中间件和`ThinkPHP`差不太多，也是非常简单的定义与使用
 
-## [验证器](./docs/validate.md)
+## [验证器](./docs/introduction/validate.md)
 爆肝开发中，原来的版本有bug还没修好
