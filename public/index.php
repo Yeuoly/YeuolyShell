@@ -11,6 +11,7 @@
  */
 
 //error_reporting(1);
+//XXX到此一游
 
 require_once('../boot/exec.php');
 
